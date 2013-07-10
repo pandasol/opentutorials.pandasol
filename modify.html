@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+ <head>
+  <title>글 저장</title>
+  <meta charset = "utf-8">
+
+  <style>
+
+  </style>
+  
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+  <script type="text/javascript">
+   $(document).ready(function() {
+    alert("저장되었습니다");
+    // location.href = "conn.php";
+   });
+  </script>
+ </head>
+
+ <body>
+  <?php
+    //header("Content-Type: text/plain; charset=utf-8");
+    // $value = $_GET['key'];
+   $prmTitle = $_REQUEST['txtTitle'];
+   $prmContent = $_REQUEST['taContent'];
+   $prmImage = $_REQUEST['hiddenInput'];
+   $prmPW = $_REQUEST['txtPW'];
+   $prmEmail = $_REQUEST['txtEmail'];
+
+   $conn = mysql_connect("localhost", "root", "apmsetup");
+   mysql_select_db("bbs", $conn);
+
+   $sql = "insert into mainboard (title, content, created, image , PW, email) values ('" . $prmTitle . "','" . $prmContent . "', now(), '" . $prmImage . "','" . $prmPW . "', '" . $prmEmail . "')";
+   echo $sql;
+
+   $ret = mysql_query($sql);
+   mysql_close($conn);
+  ?>
+ </body>
+</html>
+
+

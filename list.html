@@ -1,0 +1,146 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>Insert title here</title> 
+<style type="text/css"> 
+    fieldset{ 
+        margin : 30px auto; 
+        width: 800px; 
+        border: none; 
+    } 
+    table{ 
+        border: 1px solid black; 
+        border-collapse: collapse; 
+    } 
+    #view th,td{ 
+        border: 1px solid black; 
+    } 
+    #view #num{width: 50px;} 
+    #view #msg{width: 550px;} 
+    #view #writer{width: 100px;} 
+    #view #date{width: 100px;} 
+    #write{ 
+        display: none; 
+    } 
+    #write .culumn{ 
+        padding-left: 10px; 
+        width: 100px; 
+    } 
+    #write #w_writer{margin: 10px 10px;}
+    #write #w_msg{ 
+        margin: 10px 10px;
+        width: 700px; 
+        height: 200px; 
+    } 
+    #write #save{text-align: right;} 
+     
+    #write.show{display: block;} 
+    #view #w_button.noneView{display: none;} 
+</style> 
+<script type="text/javascript"> 
+     
+    function save() { 
+        var f = document.getElementById("write"); 
+         
+        var writer = document.getElementById("w_writer"); 
+        if (writer.value == "") { 
+            alert("글쓴이를 입력하세요!"); 
+            writer.focus(); 
+            return; 
+        } 
+        var msg = document.getElementById("w_msg"); 
+        if (msg.value == "") { 
+            alert("내용을 입력하세요!"); 
+            msg.focus(); 
+            return; 
+        } 
+         
+        f.submit(); 
+    } 
+    function write_view(n) { 
+        var f = document.getElementById("write"); 
+        f.className = "show"; 
+        n.className = "noneView"; 
+    } 
+</script> 
+</head> 
+<body> 
+    <fieldset id=view> 
+        <table> 
+            <thead> 
+                <tr> 
+                    <th id=num>번호</th> 
+                    <th id=msg>제목</th> 
+                    <th id=writer>글쓴이</th> 
+                    <th id=date>날짜</th> 
+                </tr> 
+            </thead> 
+            <tfoot> 
+                <tr> 
+                    <td colspan="4"><input type="button" value="글쓰기" id="w_button" onclick="write_view(this)"/></td> 
+                </tr> 
+            </tfoot> 
+            <tbody> 
+         
+            </tbody> 
+        </table> 
+    </fieldset> 
+    <form action="/1106_JSP/quest/memo_write.jsp" method="post" id="write"> 
+        <fieldset> 
+        	<h1 alingn = "center">
+			<t>
+				<t>
+					Board
+				</t>
+			</t></h1>
+			<table align = "center" border = "3">
+				<tr>
+					<td>작성자</td>
+					<td>
+					<input type="text" id="w_writer" name="w_writer" size = "55">
+					</td>
+					<td>암호</td>
+					<td>
+					<input type = "password" name="pw">
+					</td>
+				</tr>
+				<tr>
+					<td>email</td>
+					<td>
+					<input type="text" name="email" size="35">
+					@
+					<select>
+
+						<option>naver.com</option>
+						<option>nate.com</option>
+						<option>daum.com</option>
+						<option>hotmail.com</option>
+						<option>gmail.com</option>
+					</select></td>
+					<td>성별</td>
+					<td>
+					<input type="radio" name="sex">
+					남
+					<input type="radio" name="sex">
+					여</td>
+				</tr>
+				<tr>
+					<td>글제목</td>
+					<td colspan="4">
+					<input type="text" size="82">
+					</td>
+				</tr>
+				<tr>
+					<td>글내용</td>
+					<td colspan="4"><input type="text" id="w_msg" name="w_msg"></td>
+				</tr>
+			</table>
+			<br>
+			<tfoot> 
+                    <tr><td colspan="2" id="save"><input type="button" value="저장" onclick="save()"/><input type="reset" value="취소"></td></tr> 
+                </tfoot> 
+               
+        </fieldset> 
+    </form> 
+</body> 
+</html>

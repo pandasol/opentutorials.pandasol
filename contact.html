@@ -9,6 +9,7 @@
 		<!-- stylesheets -->
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<link href="css/light.css" rel="stylesheet" type="text/css" />
+	
 		<!-- modernizr enables HTML5 elements and feature detects -->
 		<script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
 	</head>
@@ -40,17 +41,12 @@
 								</li>
 							</ul>
 						</li>
-						<li>
-							<a href="blog.html">download</a>
-						</li>
-						<ul>
-							<li>
-								<a href="portfolio_one.html">survey</a>
-							</li>
-							<li>
-								<a href="portfolio_two.html">files</a>
-							</li>
-						</ul>
+						<li><a href="#">download</a>
+          <ul>
+              <li><a href="blog.html">survey</a></li>
+              <li><a href="blog_2510.html">files</a></li>
+            </ul>
+            </li>
 						<li>
 							<a href="contact.html">board</a>
 						</li>
@@ -60,152 +56,75 @@
 			<!-- end header -->
 
 			<!-- begin content -->
-			<style type="text/css"> 
-    fieldset{ 
-        margin : 30px auto; 
-        width: 800px; 
-        border: none; 
-    } 
-    table{ 
-        border: 1px solid black; 
-        border-collapse: collapse; 
-    } 
-    #view th,td{ 
-        border: 1px solid black; 
-    } 
-    #view #num{width: 50px;} 
-    #view #msg{width: 550px;} 
-    #view #writer{width: 100px;} 
-    #view #date{width: 100px;} 
-    #write{ 
-        display: none; 
-    } 
-    #write .culumn{ 
-        padding-left: 10px; 
-        width: 100px; 
-    } 
-    #write #w_writer{margin: 10px 10px;}
-    #write #w_msg{ 
-        margin: 10px 10px;
-        width: 700px; 
-        height: 200px; 
-    } 
-    #write #save{text-align: right;} 
-     
-    #write.show{display: block;} 
-    #view #w_button.noneView{display: none;} 
-</style> 
-<script type="text/javascript"> 
-     
-    function save() { 
-        var f = document.getElementById("write"); 
-         
-        var writer = document.getElementById("w_writer"); 
-        if (writer.value == "") { 
-            alert("글쓴이를 입력하세요!"); 
-            writer.focus(); 
-            return; 
-        } 
-        var msg = document.getElementById("w_msg"); 
-        if (msg.value == "") { 
-            alert("내용을 입력하세요!"); 
-            msg.focus(); 
-            return; 
-        } 
-         
-        f.submit(); 
-    } 
-    function write_view(n) { 
-        var f = document.getElementById("write"); 
-        f.className = "show"; 
-        n.className = "noneView"; 
-    } 
-</script> 
-</head> 
-<body> 
-    <fieldset id=view> 
-        <table> 
-            <thead> 
-                <tr> 
-                    <th id=num>번호</th> 
-                    <th id=msg>제목</th> 
-                    <th id=writer>글쓴이</th> 
-                    <th id=date>날짜</th> 
-                </tr> 
-            </thead> 
-            <tfoot> 
-                <tr> 
-                    <td colspan="4"><input type="button" value="글쓰기" id="w_button" onclick="write_view(this)"/></td> 
-                </tr> 
-            </tfoot> 
-            <tbody> 
-         
-            </tbody> 
-        </table> 
-    </fieldset> 
-    <form action="/1106_JSP/quest/memo_write.jsp" method="post" id="write"> 
-        <fieldset> 
-        	<h1 alingn = "center">
-			<t>
-				<t>
-					Board
-				</t>
-			</t></h1>
-			<table align = "center" border = "3">
+			
+			<table cellspacing=0 cellpadding=2 border=0 width=540>
 				<tr>
-					<td>작성자</td>
-					<td>
-					<input type="text" id="w_writer" name="w_writer" size = "55">
-					</td>
-					<td>암호</td>
-					<td>
-					<input type = "password" name="pw">
-					</td>
-				</tr>
-				<tr>
-					<td>email</td>
-					<td>
-					<input type="text" name="email" size="35">
-					@
-					<select>
+					<td width="185" align="left"><b><h1>searching result / list</h1></b></td>
+					<td width="173" align="center" class="f8">Total :  &nbsp;/ Pages</td>
 
-						<option>naver.com</option>
-						<option>nate.com</option>
-						<option>daum.com</option>
-						<option>hotmail.com</option>
-						<option>gmail.com</option>
-					</select></td>
-					<td>성별</td>
-					<td>
-					<input type="radio" name="sex">
-					남
-					<input type="radio" name="sex">
-					여</td>
-				</tr>
-				<tr>
-					<td>글제목</td>
-					<td colspan="4">
-					<input type="text" size="82">
-					</td>
-				</tr>
-				<tr>
-					<td>글내용</td>
-					<td colspan="4"><input type="text" id="w_msg" name="w_msg"></td>
+					<td width="170" align="right"> <h4>[<a href="contact.html">all list</a>] [<a href="write.html">new text</a>]</h4></td>
 				</tr>
 			</table>
-			<br>
-			<tfoot> 
-                    <tr><td colspan="2" id="save"><input type="button" value="저장" onclick="save()"/><input type="reset" value="취소"></td></tr> 
-                </tfoot> 
-               
-        </fieldset> 
-    </form> 
+<center>
+			<table width="540" cellpadding="2" cellspacing=0 style='word-break:break-all;'>
+				<tr>
+					<td colspan=4 height=1 bgcolor="#cccccc"></td>
+				</tr>
+				<tr bgcolor="#ededed">
+					<td width="40" align="center">number</td>
+					<td width="320" align="center">title</td>
+					<td width="40" align="center">view</td>
+					<td width="80" align="center">date</td>
+				</tr>
+				<tr>
+					<td colspan=4 height=1 bgcolor="#cccccc"></td>
+				</tr>
+
+				<tr bgcolor="#ffffff">
+					<td align="center"></td>
+					<td><a href="view.html"></a></td>
+					<td align="center"></td>
+					<td align="center"></td>
+				</tr>
+				<tr>
+					<td colspan=4 height=1 bgcolor="#cccccc"></td>
+				</tr>
+				<tr>
+					<td colspan=4 height=1 bgcolor="#cccccc"></td>
+				</tr>
+			</table>
+
+			<!-- ÆäÀÌÁö °üž®œÃÀÛ-->
+			<table width="540" cellpadding="2" cellspacing="0" border="0">
+				<tr>
+					<td height="30" align="center"></td>
+				</tr>
+			</table>
+			<!--°Ë»ö ºÎºÐ-->
+			<table width="540" cellpadding="2" cellspacing="0" border="0">
+				<form method="Get" Action="list.html">
+					<tr align="center">
+						<td height="50">
+						<select name="Field">
+							<option value="Subject">title <option value="Content">text
+						</select>
+						<input type="text" name="Str">
+						<input type=submit value="search">
+						</td>
+					</tr>
+				</form>
+			</table>
+			</center>
 			<!-- end content -->
 
 			<!-- begin footer -->
 			<footer>
-				<p>2013 All Rights Reserved. Design <a href="http://cse.dongguk.edu"> Dongguk computer engineering </a> simulation.</p>
-			<p><a href="http://www.dongguk.edu"><img src="images/22.png" alt="dongguk" /></a>&nbsp;<a href="http://engineer.dongguk.edu"><img src="images/1.png" alt="engineering"/>&nbsp;</a></p>
+				<p>
+					2013 All Rights Reserved. Design <a href="http://cse.dongguk.edu"> Dongguk computer engineering </a> simulation.
+				</p>
+				<p>
+					<a href="http://www.dongguk.edu"><img src="images/22.png" alt="dongguk" /></a>&nbsp;<a href="http://engineer.dongguk.edu"><img src="images/1.png" alt="engineering"/>&nbsp;</a>
+				</p>
 				</p>
 			</footer>
 			<!-- end footer -->

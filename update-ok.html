@@ -1,0 +1,53 @@
+<!-- #include file="inc.asp" -->
+<%
+'ŒöÁ€ÇÒ ±Û¹øÈ£žŠ ÀüŒÛ¹ÞŽÂŽÙ
+Sid = Request.QueryString("sid")
+
+'ŒöÁ€ÇÑ °ªµéÀ» ÀüŒÛ¹ÞŽÂŽÙ
+
+Subject = Trim(Request.Form("Subject"))
+Subject = Replace(Subject, "'","''")
+
+Content = Trim(Request.Form("Content"))
+Content = Replace(Content, "'","''")
+
+Pass = Trim(Request.Form("pass"))
+Pass = Replace(Pass, "'","''")
+
+Set DB = Server.CreateObject("ADODB.Connection")
+DB.open ConnString
+
+'µðºñ¿¡ ÀúÀåµÈ ºñ¹Ð¹øÈ£žŠ °¡Á®¿ÂŽÙ
+SQL = " SELECT top 1 pass FROM NEWS "
+SQL = SQL & " WHERE sid =" & sid
+Set RS = DB.Execute(SQL)
+OLDPass=Rs("pass")
+
+RS.CLose
+Set RS=nothing
+
+
+'µÎ°³ÀÇ ºñ¹Ð¹øÈ£žŠ È®ÀÎÇÑŽÙ
+IF (Pass = OLDPass or pass="1234") then 'µÎ°³ÀÇ ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏ°Å³ª 1234ÀÏ °æ¿ì(1234ŽÂ °üž®ÀÚ¿ëÀž·Î)
+SQL = " UPDATE NEWS "
+SQL = SQL & " SET Subject='" & Subject & "',"
+SQL = SQL & " Content='" & Content & "'"
+SQL = SQL & " WHERE sid = " & Sid
+
+DB.Execute(SQL)
+DB.CLose
+Set DB=nothing
+
+URL = "list.asp"
+Response.Redirect URL
+Else
+
+
+%>
+<script language="javascript">
+alert("ŸÏÈ£°¡ Æ²ž³ŽÏŽÙ.-----");
+history.back();
+</script>
+<%
+End if
+%>

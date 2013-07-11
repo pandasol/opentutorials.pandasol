@@ -1,0 +1,91 @@
+table{
+ font-size: .8em;
+ width: 690px;
+ 
+ border-collapse: collapse;
+}
+
+th{
+ text-align: center;
+ height: 25px;
+}
+tr{
+ border-bottom: 1px; 
+ height: 30px;
+ text-align: center;
+}
+td{
+ border-bottom: 1px dashed #gggggg;  
+}
+
+.heading{ background-color: #DBF0C4; color:#357A14; }
+.col1{
+text-align: center;
+width: 60px;
+ 
+  }
+.col2{ width: 350px; }
+.col3{ width: 100px; }
+.col4{ width: 100px; }
+.col5{ width: 50px;  }
+
+a{ text-decoration:none; color: #000000; }
+a:hover{ color:#357A14;}
+a:visited{ color:#a1a1a1; }
+
+input, textarea {
+ border: 1px solid ;
+ background-color: white;
+ padding-top: 2px;
+ height: 20px;
+}
+select {
+ border: 1px solid ;
+ background-color: white;
+ height: 20px;
+}
+h1{
+ font-size: 1em;
+ text-align: center;
+}
+#search, #list{
+ text-align: center;
+}
+#right{
+ text-align: right;
+}
+.topBar{
+   background-color: #DBF0C4;
+   height: 8px;
+   border-bottom: 1px solid ;
+   border-top: 1px solid ;
+  }
+  #contents{
+   width: 90%;
+   margin : 10px 10px 10px 10px;
+   line-height: 170%;
+   text-align: left;
+   background-image: url(images/head_back.gif);
+  }
+  #detailView, #replyList{
+   text-align:center;
+  }
+  #buttons{
+   text-align:right;
+  }
+  #detailView td#left,
+  #replyList td#left {
+   text-align:left;
+  }
+  #re {
+   background-color:#e6e6e6 ;
+  }
+  form{
+   margin: 0;
+   padding: 0;
+  }
+  textarea{
+   width: 520px ;
+   height: 40px ;
+   overflow: hidden;
+  }

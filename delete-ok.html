@@ -1,0 +1,41 @@
+<!-- #include file="Inc.asp" -->
+<%
+'»èÁŠÇÒ ±Û¹øÈ£žŠ ÀüŒÛ¹ÞŽÂŽÙ
+Sid = Request.QueryString("sid")
+
+'»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ºñ¹Ð¹øÈ£žŠ ÀüŒÛ¹ÞŽÂŽÙ
+Pass = Request.Form("pass")
+
+'µ¥ÀÌÅžº£ÀÌœºÀÇ ºñ¹Ð¹øÈ£žŠ °¡Á®¿ÂŽÙ
+
+Set DB = Server.CreateObject("ADODB.Connection")
+DB.open ConnString
+SQL = " SELECT top 1 pass FROM NEWS "
+SQL = SQL & " WHERE sid =" & sid
+Set RS = DB.Execute(SQL)
+OLDPass=Rs("pass")
+
+RS.CLose
+Set RS=nothing
+
+'µÎ°³ÀÇ ºñ¹Ð¹øÈ£žŠ È®ÀÎÇÑŽÙ
+IF (Pass = OLDPass) or pass="1234" then 'µÎ°³ÀÇ ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏ°Å³ª 1234ÀÏ °æ¿ì(1234ŽÂ °üž®ÀÚ¿ëÀž·Î)
+Set DB = Server.Createobject("ADODB.Connection")
+DB.open ConnString
+
+SQL = "DELETE from NEWS "
+SQL = SQL & " WHERE sid =" & sid
+DB.Execute(SQL)
+DB.CLose
+Set DB=nothing
+URL = "list.asp"
+Response.Redirect URL
+Else
+%>
+<script language="javascript">
+alert("ŸÏÈ£°¡ Æ²ž³ŽÏŽÙ.-----");
+history.back();
+</script>
+<%
+End if
+%>

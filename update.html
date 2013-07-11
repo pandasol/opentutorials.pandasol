@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Dongguk Smulation</title>
+		<meta name="description" content="website description" />
+		<meta name="keywords" content="website keywords, website keywords" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<!-- stylesheets -->
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/light.css" rel="stylesheet" type="text/css" />
+		
+		<!-- modernizr enables HTML5 elements and feature detects -->
+		<script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+	</head>
+
+	<body>
+		<div id="main">
+
+			<!-- begin header -->
+			<header>
+				<div id="logo">
+					<h1>DONGGUK<a href="http://simulation.dongguk.edu">SIMULATION</a>ENGINE</h1>
+				</div>
+				<nav>
+					<ul class="sf-menu" id="nav">
+						<li class="selected">
+							<a href="index.html">home</a>
+						</li>
+						<li>
+							<a href="about.html">about</a>
+						</li>
+						<li>
+							<a href="#">gallery</a>
+							<ul>
+								<li>
+									<a href="portfolio_one.html">photo</a>
+								</li>
+								<li>
+									<a href="portfolio_two.html">video</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">download</a>
+          <ul>
+              <li><a href="blog.html">survey</a></li>
+              <li><a href="blog_2510.html">files</a></li>
+            </ul>
+            </li>
+						<li>
+							<a href="contact.html">board</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<!-- end header -->
+
+			<!-- begin content -->
+			<script language="Javascript">
+								<!--
+				function Send() {
+
+				var vS = document.form.Subject.value;
+				var vC = document.form.Content.value;
+				var vP = document.form.Pass.value;
+
+				if (vS == "") {
+				alert("input title.\n");
+				document.form.Subject.focus();
+				return false;
+				}
+				if (vC == "") {
+				alert("input text.\n");
+				document.form.Content.focus();
+				return false;
+				}
+				if (vP == "") {
+				alert("input pwd.\n");
+				document.form.Pass.focus();
+				return false;
+				}
+				return true;
+				}
+				-->
+			</script>
+
+			<!-- #include file="inc.asp" -->
+
+			<table cellspacing=0 cellpadding=2 border="0" width="540">
+				<tr>
+					<td width=167 align="left"><b>change text</b></td>
+					<td width=273 align="center">&nbsp;</td>
+					<td width=100 align="right">[<a href="javascript:history.go(-1)">back again</a>]</td>
+				</tr>
+			</table>
+
+			<table width="540" border=0 cellpadding=2 cellspacing=0 bgcolor="#ededed">
+				<form method=post action="update-ok.html" name="form" onSubmit="return Send()">
+					<tr>
+						<td colspan=2 height=1 bgcolor="#cccccc"></td>
+					</tr>
+					<tr>
+						<td width="60" align="center">title</td>
+						<td>
+						<input name="Subject" type="text" value="<%=subject%>" size="60">
+						</td>
+					</tr>
+					<tr>
+						<td width="60" align="center">text</td>
+						<td>						<textarea rows="10" cols="60" name="Content"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan=2 height=1 bgcolor="#cccccc"></td>
+					</tr>
+					<tr>
+						<td align="center">password</td>
+						<td>
+						<input type="password" name="Pass" size="20" maxlength="10">
+						</td>
+					</tr>
+					<tr>
+						<td height="40" colspan="2" align="center" bgcolor="#FFFFFF">
+						<input type="submit" value="complete" name="submit2">
+						<input type="reset" value="new input" name="reset2">
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2 height=1 bgcolor="#cccccc"></td>
+					</tr>
+				</form>
+			</table>
+			<!-- end content -->
+
+			<!-- begin footer -->
+			<footer>
+				<p>
+					2013 All Rights Reserved. Design <a href="http://cse.dongguk.edu"> Dongguk computer engineering </a> simulation.
+				</p>
+				<p>
+					<a href="http://www.dongguk.edu"><img src="images/22.png" alt="dongguk" /></a>&nbsp;<a href="http://engineer.dongguk.edu"><img src="images/1.png" alt="engineering"/>&nbsp;</a>
+				</p>
+				</p>
+			</footer>
+			<!-- end footer -->
+
+		</div>
+		<!-- javascript at the bottom for fast page loading -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+		<script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+		<!-- initialise sooperfish menu -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('ul.sf-menu').sooperfish();
+			});
+		</script>
+	</body>
+</html>
